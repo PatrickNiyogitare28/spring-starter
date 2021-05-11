@@ -30,12 +30,12 @@ public class ProductController {
 
     @GetMapping("/productById/{id}")
     public Product findProductById(@PathVariable int id){
-        return (Product) this.service.getProductById(id);
+        return this.service.getProductById(id);
     }
 
     @GetMapping("/product/{name}")
     public Product findProductByName(@PathVariable String name){
-        return (Product) this.service.getProductByName(name);
+        return this.service.getProductByName(name);
     }
 
     @PutMapping("/update")
