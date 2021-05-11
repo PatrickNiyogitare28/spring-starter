@@ -24,12 +24,12 @@ public class ProductService {
         return repository.findAll();
     }
 
-    public List<Product> getProductById(int id){
-        return (List<Product>) repository.findById(id).orElse(null);
+    public Product getProductById(int id){
+        return  repository.findById(id).orElse(null);
     }
 
-    public List<Product> getProductByName(String name){
-        return (List<Product>) repository.findByName(name);
+    public Product getProductByName(String name){
+        return  repository.findByName(name);
     }
 
     public String deleteProduct(int id){
